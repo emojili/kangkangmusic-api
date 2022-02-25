@@ -10,14 +10,14 @@ const cors = require('./middlewares/koa-cors');
 const router = require('./routers/router');
 require('./util/colors');
 
-exec('npm info QQ-Music-API version', (err, stdout, stderr) => {
-  if(!err){
-    let version = stdout.trim()
-    if(package.version < version){
-      console.log(`Current Version: ${version}, Current Version: ${package.version}, Please update it.`.prompt);
-    }
-  }
-});
+// exec('npm info QQ-Music-API version', (err, stdout, stderr) => {
+//   if(!err){
+//     let version = stdout.trim()
+//     if(package.version < version){
+//       console.log(`Current Version: ${version}, Current Version: ${package.version}, Please update it.`.prompt);
+//     }
+//   }
+// });
 
 app.use(bodyParser());
 app.use(static(
